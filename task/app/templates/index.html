@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+{%load static%}
+{% block content %}
+<div>
+    <h3 id="quote-head">Here's your Quote of The Day :</h3>
+    <p><b><i>{{ quotes.quote }}</i></b></p>
+    <p><strong>Written by: </strong>{{quotes.author}}</p>
+
+    <div>
+        <h4 id="form-head">Connect with us!</h4>
+        <form method="post" action="{% url 'submit_form' %}">
+            {% csrf_token %}
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
+    

@@ -1,0 +1,16 @@
+<!-- This page displays the information submitted by the user on the home page -->
+{% extends 'main.html' %}
+{%load static%}
+{% block content %}
+<div>
+        <h2>We have received your data!</h2>
+        <p>Here is what was received:</p>
+        
+        <p>Your name:{{ user_data.name }}</p>
+        <p>Your email:{{ user_data.email }}</p>
+
+        <p>Thanks for reaching out to us,{{user_data.name}}!</p>
+        <a href="{% url 'home' %}" class="button">Back to Home</a>
+    </main>
+</div>
+{% endblock content %}
