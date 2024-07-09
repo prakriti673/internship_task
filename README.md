@@ -7,5 +7,8 @@
 6. Run ```python manage.py runserver```
 7. Visit (http://127.0.0.1:8000/) in your browser and view.
 
+
+## Create your own API Key by signing up on the website: ```https://api-ninjas.com/```
+## Change the API Key in ```app/views.py``` ```def home()``` ```response = requests.get(api_url, headers={'X-Api-Key': '```Your API Key```'})```
 ## To submit data, enter data in the form on the home page
 ## To view data of all users, click on ```List of Users``` in the header section.
